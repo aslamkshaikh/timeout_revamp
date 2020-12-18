@@ -1,0 +1,810 @@
+section,
+.panel-pane {
+    margin-bottom: 85px;
+
+    @include breakpoint(sm) {
+        margin-bottom: 55px;
+    }
+
+    @include maxbreakpoint(xs) {
+        margin-bottom: 45px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+a,
+.btn,
+button {
+    outline: 0;
+
+    &:focus,
+    &:hover {
+        outline: inherit;
+        box-shadow: none;
+    }
+}
+
+:focus {
+    outline: 0 none;
+}
+
+#main {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include media-breakpoint-down($name: 'md', $breakpoints: $grid-breakpoints) {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+}
+
+.right-sidebar {
+    @include media-breakpoint-up($name: 'xl', $breakpoints: $grid-breakpoints) {
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -5.75px;
+            margin-right: -5.75px;
+        }
+
+        .content {
+            width: 74.30453879941435%;
+
+            @include media-breakpoint-down($name: 'md', $breakpoints: $grid-breakpoints) {
+                width: 100%;
+            }
+        }
+
+        .sidebar {
+            margin-left: 3.733528550512445%;
+            width: 21.96193265007321%;
+
+            @include media-breakpoint-down($name: 'md', $breakpoints: $grid-breakpoints) {
+                width: 100%;
+            }
+        }
+
+        .sidebar-new {
+            margin-left: 3.733528550512445%;
+        }
+    }
+}
+
+.container-xl {
+    @include media-breakpoint-up($name: 'xl', $breakpoints: $grid-breakpoints) {
+        &.expanded {
+            padding-left: 17.5px;
+            padding-right: 17.5px;
+
+            .content {
+                margin-left: -17.5px;
+            }
+
+            .sidebar {
+                margin-right: -17.5px;
+            }
+
+            @each $breakpoint in map-keys($grid-breakpoints) {
+                $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+                @if $grid-columns>0 {
+
+                    // Allow columns to stretch full width below their breakpoints
+                    @for $i from 1 through $grid-columns {
+                        .col#{$infix}-#{$i} {
+                            padding-left: 17.5px;
+                            padding-right: 17.5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include maxbreakpoint(xs) {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @each $breakpoint in map-keys($grid-breakpoints) {
+            $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+            @if $grid-columns>0 {
+
+                // Allow columns to stretch full width below their breakpoints
+                @for $i from 1 through $grid-columns {
+                    .col#{$infix}-#{$i} {
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container {
+    @include maxbreakpoint(xs) {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @each $breakpoint in map-keys($grid-breakpoints) {
+            $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+            @if $grid-columns>0 {
+
+                // Allow columns to stretch full width below their breakpoints
+                @for $i from 1 through $grid-columns {
+                    .col#{$infix}-#{$i} {
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.row {
+    @include maxbreakpoint(xs) {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+.top-custom-section {
+    .outer-area {
+        text-align: center;
+
+        img {
+            width: 168px;
+            height: 168px;
+            border-radius: 100%;
+
+            @include maxbreakpoint(md) {
+                width: 148px;
+                height: 148px;
+            }
+
+            @include maxbreakpoint(md) {
+                width: 106px;
+                height: 106px;
+            }
+
+            @include maxbreakpoint(xs) {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        a {
+            font-family: $font-family-secondary;
+            font-size: 18px;
+            line-height: 23px;
+            color: #000;
+
+            @include breakpoint(sm) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @include maxbreakpoint(xs) {
+        margin-bottom: 12px !important;
+    }
+}
+
+.tag {
+    display: block;
+    line-height: 26px;
+    font-weight: 400;
+    @include font-size(24);
+    text-transform: capitalize;
+    color: $tag-default-color;
+    padding-left: 14px;
+    border-left: 5px solid $tag-border-color;
+    font-family: $font-family-secondary;
+
+    a {
+        color: #9f9898;
+    }
+
+    @include breakpoint(md) {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    @include breakpoint(sm) {
+        font-size: 16px;
+        line-height: 16px;
+        padding-left: 8px;
+        border-left: 3px solid #ffd300;
+    }
+}
+
+.panel-footer {
+    .panel-datetime {
+        font-size: 18px;
+        font-family: $font-family-secondary;
+
+        @include breakpoint(md) {
+            font-size: 16px;
+        }
+
+        @include breakpoint(sm) {
+            font-size: 14px;
+        }
+    }
+}
+
+.section-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+
+    @include maxbreakpoint(xs) {
+        margin-bottom: 29px;
+    }
+
+    &:before {
+        height: 5px;
+        background-color: $black;
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        // margin-top: -2.5px;
+        z-index: -1;
+    }
+
+    .section-title {
+        color: #161615;
+        font-size: 2.75rem;
+        line-height: 1.2;
+        letter-spacing: 0.66px;
+        margin-bottom: 0;
+
+        @include breakpoint(md) {
+            font-size: 34px;
+            line-height: 34px;
+            padding-right: 20px;
+        }
+
+        @include breakpoint(sm) {
+            font-size: 28px;
+            line-height: 28px;
+            padding-right: 20px;
+        }
+
+        display: flex;
+        align-self: flex-end;
+        background-color: $white;
+        /* padding-left: 15px; */
+        padding-right: 30px;
+
+        @include maxbreakpoint(xs) {
+            padding-right: 20px;
+            font-size: 32px;
+        }
+    }
+
+    .btn-readmore {
+        @include maxbreakpoint(xs) {
+            display: none;
+        }
+    }
+}
+
+.ad {
+    .ad-inner {
+        background: $ad-bg-color;
+    }
+
+    &.ad-970 {
+        .ad-inner {
+            max-width: 970px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.horizontal-ad-section {
+    .ad {
+        border-top: 1px solid $ad-bg-color;
+        border-bottom: 1px solid $ad-bg-color;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+.in-page-ad {
+    float: left;
+    width: 300px;
+    height: 250px;
+    margin-right: 33px;
+}
+
+.overlay-block {
+    padding: 80px 25px 55px;
+
+    @include breakpoint(md) {
+        padding: 50px 25px 35px;
+    }
+
+    @include breakpoint(sm) {
+        padding: 30px 15px 20px;
+    }
+
+    @include maxbreakpoint(xs) {
+        padding: 20px 14px 5px;
+    }
+
+    background-color: $white;
+
+    .mh-a {
+        @include font-size(40);
+        margin-bottom: 12px;
+        line-height: 44px;
+
+        @include breakpoint(md) {
+            font-size: 30px;
+            line-height: 34px;
+        }
+
+        @include breakpoint(sm) {
+            font-size: 22px;
+            line-height: 26px;
+        }
+
+        @include maxbreakpoint(xs) {
+            font-size: 30px;
+            line-height: 38px;
+            margin-bottom: 7px;
+        }
+
+        a {
+            color: #000;
+        }
+    }
+
+    .mh-od {
+        font-family: $font-family-secondary;
+        font-size: 24px;
+        line-height: 31px;
+        margin-bottom: 35px;
+        color: $black-01;
+
+        @include breakpoint(md) {
+            margin-bottom: 25px;
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        @include breakpoint(sm) {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 15px;
+        }
+
+        @include maxbreakpoint(xs) {
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.full-width-mi-art {
+    .panel-picture {
+        margin-bottom: 0 !important;
+    }
+}
+
+.caption-description {
+    font-family: $font-family-secondary;
+    font-size: 1.5rem;
+    line-height: 1.29;
+
+    @include breakpoint(md) {
+        font-size: 20px !important;
+        line-height: 28px !important;
+    }
+
+    @include breakpoint(sm) {
+        font-size: 16px !important;
+        line-height: 22px !important;
+    }
+
+    color: #161615;
+    letter-spacing: 0.36px;
+
+    @include maxbreakpoint(xs) {
+        font-size: 18px !important;
+        line-height: 26px !important;
+    }
+}
+
+.full-width-mi-art {
+    .caption-description {
+        @include maxbreakpoint(xs) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+//custom-btn-colo
+.custom-yl-btn {
+    font-size: 20px;
+    letter-spacing: 0.3px;
+    color: #161615;
+
+    @include maxbreakpoint(md) {
+        font-size: 15px;
+    }
+
+    @include maxbreakpoint(xs) {
+        font-size: 18px;
+        padding: 7px 25px;
+    }
+}
+
+.section-overlay {
+    .row {
+        align-items: center;
+    }
+}
+
+.overlay-stack {
+    margin-left: -111px;
+    position: relative;
+    z-index: 1;
+
+    @include maxbreakpoint(xs) {
+        margin: -36px 0 0 0;
+    }
+}
+
+.rb-c {
+    .rb-cm {
+        margin-left: -17.5px;
+        margin-right: -17.5px;
+
+        @include maxbreakpoint(xs) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .rb-cp {
+            padding-left: 17.5px;
+            padding-right: 17.5px;
+
+            @include maxbreakpoint(xs) {
+                padding: 0;
+            }
+        }
+    }
+
+    .sidebar-new-two {
+        padding-left: 19px;
+    }
+}
+
+.on-store img {
+    @include maxbreakpoint(md) {
+        max-width: 110px;
+    }
+}
+
+//Default css classes for margin padding
+.mb-47 {
+    margin-bottom: 47px;
+
+    @include breakpoint(sm) {
+        margin-bottom: 30px;
+    }
+
+    @include maxbreakpoint(xs) {
+        margin-bottom: 38px;
+    }
+}
+
+.pm-0 {
+    @include maxbreakpoint(xs) {
+        padding: 0 !important;
+    }
+}
+
+.mb-m-38 {
+    @include maxbreakpoint(xs) {
+        margin-bottom: 38px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.inner-adds-section {
+    @include maxbreakpoint(xs) {
+        background: #e8e8e8;
+        padding: 10px 32px;
+        margin-top: 45px;
+    }
+}
+
+.container-xl.no-pad-head {
+    @include maxbreakpoint(xs) {
+        padding-right: 0;
+    }
+}
+
+.footer-btn-sec {
+    .btn-readmore {
+        @include maxbreakpoint(xs) {
+            display: block !important;
+            font-size: 18px;
+            padding: 8px 38px 8px;
+        }
+    }
+
+    .section-header {
+        &:before {
+            @include maxbreakpoint(xs) {
+                display: none;
+            }
+        }
+
+        @include maxbreakpoint(xs) {
+            margin-top: 45px;
+            justify-content: center;
+        }
+    }
+}
+
+.top-custom-section {
+    .top-stories {
+        @include maxbreakpoint(xs) {
+            padding: 0;
+        }
+
+        .row {
+            @include maxbreakpoint(xs) {
+                width: 100%;
+                padding-bottom: 5px;
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                margin: 0;
+                flex-wrap: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .col-md-2 {
+                @include maxbreakpoint(xs) {
+                    padding: 0;
+                    margin: 0px 0px 0 15px;
+                }
+
+                .outer-area {
+                    @include maxbreakpoint(xs) {
+                        width: 100px;
+                    }
+
+                    a {
+                        @include maxbreakpoint(xs) {
+                            white-space: normal;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .panel-picture {
+                        @include maxbreakpoint(xs) {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.d-none-cus {
+    @include maxbreakpoint(xs) {
+        display: none !important;
+    }
+
+    &.d-sm-block-cus {
+        @include minbreakpoint(sm) {
+            display: block !important;
+        }
+    }
+}
+
+.d-block-cus {
+    @include maxbreakpoint(xs) {
+        display: block !important;
+    }
+
+    &.d-sm-none-cus {
+        @include minbreakpoint(sm) {
+            display: none !important;
+        }
+    }
+}
+
+.pr-half:nth-child(odd) {
+    @include maxbreakpoint(xs) {
+        padding-right: 7.5px;
+    }
+}
+
+.pr-half:nth-child(even) {
+    @include maxbreakpoint(xs) {
+        padding-left: 7.5px;
+    }
+}
+
+.pr-half {
+    @include maxbreakpoint(xs) {
+        margin-bottom: 0;
+    }
+
+    .panel-title {
+        @include maxbreakpoint(xs) {
+            font-size: 20px !important;
+        }
+    }
+}
+
+header {
+    @include maxbreakpoint(sm) {
+        padding-top: 50px;
+        padding-bottom: 15px;
+        border-bottom: solid 3.5px #000;
+    }
+}
+
+.col-xl-3.pr-0.header-logo-section {
+    @include maxbreakpoint(xs) {
+        padding: 0px 13px !important;
+    }
+}
+
+.head-block {
+    a.link-search {
+        @include maxbreakpoint(xs) {
+            padding: 0;
+        }
+    }
+
+    .header-logo {
+        img {
+            @include maxbreakpoint(xs) {
+                max-width: 180px;
+            }
+        }
+    }
+}
+
+.side-drawer {
+    .social-inline {
+        @include maxbreakpoint(sm) {
+            max-width: 80%;
+            border-top: solid 1px #fff;
+            margin: 0 auto !important;
+            padding: 20px 5px !important;
+            padding-bottom: 40px !important;
+        }
+    }
+}
+
+div#popup-search,
+div#popup-subscribe {
+    @include maxbreakpoint(sm) {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 9999;
+        height: 100%;
+    }
+}
+
+div#popup-subscribe {
+    @include maxbreakpoint(sm) {
+        background: #000;
+    }
+}
+
+body.side-drawer-open {
+    &:after {
+        @include maxbreakpoint(sm) {
+            content: "";
+            display: block;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            background: #fff;
+            z-index: 99;
+            top: 0;
+            bottom: 0;
+            opacity: 0.49;
+            -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(50px);
+            background-color: #ffffff;
+        }
+    }
+}
+
+.side-drawer {
+    .nav-support.list-inline li:first-child a {
+        padding-bottom: 0;
+    }
+}
+
+.ad.ad-300 {
+    @include minbreakpoint(mdd) {
+        padding-left: 19px;
+    }
+}
+
+//Default css classes for margin padding
+// Hero article styling
+.hero-article {
+    height: 70vh;
+    position: relative;
+    background-image: url('https://via.placeholder.com/1920x980');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+
+    .hero-article-title {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        text-align: center;
+
+        h1 {
+            font-size: 60px;
+            line-height: 77px;
+            color: #fff;
+            max-width: 60%;
+            margin: 0 auto;
+
+            @include breakpoint(md) {
+                font-size: 50px;
+                line-height: 67px;
+                max-width: 80%;
+            }
+
+            @include breakpoint(sm) {
+                font-size: 40px;
+                line-height: 57px;
+            }
+
+            @include maxbreakpoint(xs) {
+                font-size: 33px;
+                line-height: 44px;
+                max-width: 95%;
+            }
+        }
+    }
+
+    span.hero-close-btn {
+        font-size: 38px;
+        /* color: #fff; */
+        position: absolute;
+        right: 36px;
+        cursor: pointer;
+    }
+}

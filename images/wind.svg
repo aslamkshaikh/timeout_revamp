@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18.997" height="12.918" viewBox="0 0 18.997 12.918">
+  <g id="Icon" transform="translate(0 -4)">
+    <path id="Path" d="M11.209,5.319H0V4.134H11.209A1.426,1.426,0,0,0,12.578,2.66a1.426,1.426,0,0,0-1.369-1.475V0a2.572,2.572,0,0,1,2.468,2.66A2.572,2.572,0,0,1,11.209,5.319Z" transform="translate(4.559 4)" fill="#1a1a1a"/>
+    <path id="Path-2" data-name="Path" d="M13.194,5.319A2.716,2.716,0,0,1,10.43,2.66h1.114a1.651,1.651,0,0,0,3.3,0,1.622,1.622,0,0,0-1.65-1.588H0V0H13.194a2.716,2.716,0,0,1,2.764,2.66A2.716,2.716,0,0,1,13.194,5.319Z" transform="translate(3.04 11.599)" fill="#1a1a1a"/>
+    <path id="Path-3" data-name="Path" d="M0,0H4.559V.76H0Z" transform="translate(5.319 13.878)" fill="#1a1a1a"/>
+    <path id="Path-4" data-name="Path" d="M0,0H3.04V.76H0Z" transform="translate(0 8.559)" fill="#1a1a1a"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="mail" width="15.734" height="11.239" viewBox="0 0 15.734 11.239">
+    <defs>
+        <style>
+            .cls-1{fill:#1a1a1a}
+        </style>
+    </defs>
+    <g id="Group_27" transform="translate(.562)">
+        <g id="Group_26">
+            <path id="Path_24" d="M31.677 68.267h-14.61l7.305 6.017 7.388-6a.509.509 0 0 0-.083-.017z" class="cls-1" transform="translate(-17.067 -68.267)"/>
+        </g>
+    </g>
+    <g id="Group_29" transform="translate(0 .992)">
+        <g id="Group_28">
+            <path id="Path_25" d="M8.222 104.593a.562.562 0 0 1-.712 0L0 98.406v9.684a.562.562 0 0 0 .562.562h14.61a.562.562 0 0 0 .562-.562v-9.6z" class="cls-1" transform="translate(0 -98.406)"/>
+        </g>
+    </g>
+</svg>
