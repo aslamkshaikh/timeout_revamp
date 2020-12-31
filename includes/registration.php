@@ -17,7 +17,7 @@
         </ul>
       </div>
       <div class="modal-footer">
-        <p>Already have a Time Out account? <a href="javascript:void(0);" data-dismiss='modal' data-toggle="modal" data-target="#login">Log In</a></p>
+        <p>Already have a Time Out account? <a href="javascript:void(0);" class="login" data-dismiss='modal' data-toggle="modal" data-target="#login">Log In</a></p>
       </div>
     </div>
   </div>

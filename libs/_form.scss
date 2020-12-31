@@ -1,34 +1,43 @@
 .form {
     overflow: scroll;
+
     .modal-dialog {
         max-width: 550px;
+
         .modal-content {
-            padding: 90px 68px 70px 68px;     
-            @include maxbreakpoint(xs) {                
+            padding: 90px 68px 70px 68px;
+
+            @include maxbreakpoint(xs) {
                 padding: 40px 15px 40px 15px;
-            }   
+            }
+
             .modal-header {
                 border-bottom: none;
                 margin-bottom: 55px;
                 padding: 0;
                 text-align: center;
-                justify-content: center;    
-                @include maxbreakpoint(xs) { 
+                justify-content: center;
+
+                @include maxbreakpoint(xs) {
                     margin-bottom: 35px;
-                }   
+                }
+
                 .modal-title {
                     font-size: 29px;
                     text-transform: uppercase;
                     line-height: 30px;
                     letter-spacing: 1.28px;
-                    @include maxbreakpoint(xs) {                
+
+                    @include maxbreakpoint(xs) {
                         font-size: 25px;
                         letter-spacing: 0.5px;
-                    } 
+                    }
                 }
+
                 .close {
                     display: none;
-                    @include maxbreakpoint(xs) { 
+
+                    @include maxbreakpoint(xs) {
                         display: block;
                         position: absolute;
                         top: 0;
@@ -38,38 +47,45 @@
                         width: 40px;
                         height: 40px;
                         text-align: center;
-                    }  
+                    }
                 }
             }
+
             .modal-body {
                 padding: 0;
             }
+
             .modal-footer {
                 padding: 40px 0 0 0;
                 justify-content: center;
                 margin-top: 30px;
-                @include maxbreakpoint(xs) { 
+
+                @include maxbreakpoint(xs) {
                     padding-top: 20px;
                     margin-top: 20px;
-                }  
+                }
+
                 p {
                     font-size: 20px;
                     color: #1a1a1a;
-                    @include maxbreakpoint(xs) { 
+
+                    @include maxbreakpoint(xs) {
                         font-size: 16px;
-                    }  
+                    }
+
                     a {
-                        color:#d31a22;
+                        color: #d31a22;
                     }
                 }
             }
         }
     }
-    
+
     ul {
         list-style: none;
         margin: 0;
         padding: 0;
+
         li {
             display: flex;
             width: 100%;
@@ -78,18 +94,21 @@
             align-items: center;
             padding: 0 25px;
             position: relative;
-            @include maxbreakpoint(xs) { 
+
+            @include maxbreakpoint(xs) {
                 min-height: 55px;
-            }   
+            }
+
             a {
-                width:100%;
-                display: block;   
-                color:#fff;     
+                width: 100%;
+                display: block;
+                color: #fff;
                 font-size: 20px;
-                letter-spacing: 0.97px;   
-                text-decoration: none;  
-                &:after {     
-                    content: "";               
+                letter-spacing: 0.97px;
+                text-decoration: none;
+
+                &:after {
+                    content: "";
                     width: 70px;
                     height: 70px;
                     display: block;
@@ -98,10 +117,12 @@
                     bottom: 0;
                     top: 0;
                     margin: auto;
-                }   
+                }
             }
-            &.facebook { 
-                background: #3c5997; 
+
+            &.facebook {
+                background: #3c5997;
+
                 a {
                     &:after {
                         background: url(../images/facebook.svg) no-repeat center center;
@@ -109,8 +130,10 @@
                     }
                 }
             }
-            &.twitter { 
-                background: #05acee; 
+
+            &.twitter {
+                background: #05acee;
+
                 a {
                     &:after {
                         background: url(../images/twitter.svg) no-repeat center center;
@@ -118,26 +141,31 @@
                     }
                 }
             }
-            &.google { 
+
+            &.google {
                 background: #dedede;
+
                 a {
                     &:after {
                         background: url(../images/google.svg) no-repeat center center;
                         background-size: 39px;
                     }
                 }
-             }
-            &.email { 
+            }
+
+            &.email {
                 background: #e0192c;
+
                 a {
                     &:after {
                         background: url(../images/mail.svg) no-repeat center center;
                         background-size: 45px;
                     }
                 }
-             }
+            }
         }
     }
+
     .login {
         .form-group {
             input {
@@ -145,6 +173,7 @@
                 border: 1px solid #eaeaea;
             }
         }
+
         button {
             background: #e0192c;
             color: #fff;
@@ -155,14 +184,249 @@
             font-weight: normal;
             margin-top: 45px;
             margin-bottom: -45px;
-            @include maxbreakpoint(xs) { 
+
+            @include maxbreakpoint(xs) {
                 margin-bottom: 0;
-            }  
+            }
         }
+
         .forget {
             color: #d31a22;
             text-decoration: none;
             float: right;
         }
+    }
+}
+
+.signin {
+    border-top: 1px solid #eaeaea;
+    padding-top: 70px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        font-size: 30px;
+        line-height: 42px;
+
+        a {
+            color: #d31a22;
+            text-decoration: underline;
+        }
+    }
+
+    .form-group {
+        display: flex;
+        margin-left: -14.5px;
+        margin-right: -14.5px;
+
+        @include maxbreakpoint(xs) {
+            display: block;
+        }
+
+        label {
+            @include maxbreakpoint(xs) {
+                margin-bottom: 5px;
+            }
+        }
+
+        &.sign-btn {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+
+    form {
+        margin-top: 30px;
+
+        a {
+            color: #d31a22;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        button {
+            background: #d31a22;
+            color: #fff;
+            position: relative;
+            width: 180px;
+            height: 51px;
+            text-align: left;
+            padding: 0 23px;
+            font-size: 20px;
+            letter-spacing: 0.44px;
+            font-weight: normal;
+            font-family: 'Roboto-Bold';
+            margin-bottom: 40px;
+
+            &:hover {
+                color: #fff;
+            }
+
+            &:after {
+                content: "";
+                border: solid #fff;
+                border-width: 0 3px 3px 0;
+                padding: 5px;
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                border-radius: 3px;
+                margin-right: 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 12px;
+                right: 23px;
+            }
+        }
+    }
+}
+
+.form-control {
+    height: 45px;
+    border-color: #ececeb;
+    box-shadow: none;
+}
+
+.col-form-label {
+    display: flex;
+    align-items: center;
+    color: #707070;
+
+    @include maxbreakpoint(xs) {
+        margin-bottom: 5px;
+    }
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: #d31a22;
+    background-color: #d31a22;
+    box-shadow: none;
+}
+
+.custom-control-label::before {
+    border-color: #dadada;
+    box-shadow: none;
+}
+
+.signup {
+    .form-group {
+        margin-bottom: 30px;
+        display: flex;
+        margin-left: -14.5px;
+        margin-right: -14.5px;
+
+        @include maxbreakpoint(xs) {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    .singup-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include maxbreakpoint(xs) {
+            display: block;
+        }
+
+        .grp-checkbox {
+            @include maxbreakpoint(xs) {
+                margin-bottom: 20px;
+            }
+        }
+
+        button {
+            background: #d31a22;
+            color: #fff;
+            width: 180px;
+            height: 51px;
+            font-size: 20px;
+            letter-spacing: 0.44px;
+            text-align: left;
+            position: relative;
+            border: none;
+
+            &:after {
+                content: "";
+                border: solid #fff;
+                border-width: 0 3px 3px 0;
+                padding: 5px;
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                border-radius: 3px;
+                margin-right: 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 12px;
+                right: 23px;
+            }
+        }
+    }
+}
+
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #ececeb !important;
+}
+
+.rail-select {
+    position: relative;
+    width: 100%;
+
+    select {
+        border: solid 1px #ececeb;
+        height: 45px;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border: solid 1px #ececeb;
+        }
+    }
+
+    .select-side {
+        pointer-events: none;
+        width: 50px;
+        position: absolute;
+        top: 0px;
+        height: 100%;
+        right: 0;
+        border-right: solid 1px #ececeb;
+        border-top: solid 1px #ececeb;
+        border-bottom: solid 1px #ececeb;
+
+        &:before {
+            content: "";
+            border: solid #707070;
+            border-width: 0 2px 2px 0;
+            padding: 5px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(45deg);
+            border-radius: 1px;
+            margin-right: 0;
+            position: absolute;
+            top: 0;
+            bottom: 5px;
+            margin: auto;
+            height: 13px;
+            left: 0;
+            right: 0;
+            width: 13px;
+        }
+    }
+}
+
+.empty {
+    @include maxbreakpoint(xs) {
+        display: none;
     }
 }

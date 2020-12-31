@@ -10,9 +10,9 @@
              <div class="col-md-8">
                  <div class="row">
                      <div class="col-md-12 mb-4">
-                         <article class="article-page">
-                             <img src="images/img4.jpg" class="img-fluid" />                             
+                         <article class="article-page">                           
                              <div class="body-content">
+                             <img src="images/img4.jpg" class="img-fluid" />  
                                 <div class="sharelist">
                                     <ul>
                                         <li class=""><a href="#" class="whatsapp"></a></li>
@@ -26,7 +26,7 @@
                                 <h1 class="page-title">
                                     Back to school: Top tips for a healthy lunch box from a nutritionist
                                 </h1>
-                                <h3>How to prepare healthy lunches for your little ones</h3>
+                                <h2>How to prepare healthy lunches for your little ones</h2>
                                 <div class="authors-info">
                                     <div class="author-name"><span>By</span> Time Out Dubai Things To Do</div>
                                     <div class="time">Posted: <span>Thursday August 27 2020</span></div>

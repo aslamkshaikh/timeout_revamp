@@ -52,8 +52,6 @@
 @import "./footer";
 @import "./general";
 @import "./form";
-@import "./padma-work";
-@import "./gaurav";
 
 /*==================================
 =            common css            =
@@ -72,3 +70,7 @@ p {
     margin: 0;
   }
 }
+.overflow-hidden1 {
+  overflow: hidden;
+}
+

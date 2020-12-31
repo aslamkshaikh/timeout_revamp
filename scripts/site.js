@@ -25,7 +25,51 @@
     jQuery(".mail").click(function(){
         jQuery('.mail-subs').toggleClass('open');
     });
-    
+
+    // jQuery(".login").click(function(){
+    //     jQuery('body').addClass('overflow-hidden1');
+    // });
+    // jQuery(".overflow-hidden1").click(function(){
+    //     jQuery('body').removeClass('overflow-hidden1');
+    // });
+
+    $('.login').click(function(){
+        $('body').removeClass('hidden');
+      });
+      $('body').click(function(){
+        $('body').addClass('hidden');
+      });
+
+
+    $(".slides").slick({
+        asNavFor: '.captions',
+        infinite: true,
+        speed: 500,
+        arrows: true,
+        autoplay: true,
+        pauseOnHover: true,
+        focusOnSelect: true,
+        adaptiveHeight: true
+      });
+      
+      $(".captions").slick({
+        asNavFor: '.slides',
+        infinite: true,
+        speed: 500,
+        fade: true,
+        arrows: false,
+        autoplay: true,   
+        pauseOnHover: true,
+        focusOnSelect: true,    
+        adaptiveHeight: true
+      });
+
+     // datepicker
+     $('.datepicker').datepicker({
+        clearBtn: true,
+        format: "dd/mm/yyyy"
+    });
+   
       
 })(jQuery);
 
